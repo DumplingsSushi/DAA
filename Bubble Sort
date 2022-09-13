@@ -1,0 +1,30 @@
+import java.util.*;
+public class Bubble {
+    public static void BubbleSort(int ar[]){
+        int n=ar.length;
+        for(int i=0;i<n-1;i++){
+            for(int j=0;j<n-i-1;j++){
+                if(ar[j]>ar[j+1]){
+                    int temp=ar[j];
+                    ar[j]=ar[j+1];
+                    ar[j+1]=temp;
+                }
+            }
+        }
+    }
+    public static void main(String[]args){
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter the size of the array ");
+        int m=in.nextInt();
+        int []ar=new int[m];
+        System.out.println("Enter the elements of the array");
+        for(int i=0;i<m;i++){
+            ar[i]=in.nextInt();
+        }
+        Bubble.BubbleSort(ar);
+        System.out.println(Arrays.toString(ar));
+        in.close();
+
+    }
+    
+}
